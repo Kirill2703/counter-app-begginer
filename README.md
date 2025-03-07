@@ -1,12 +1,37 @@
-# React + Vite
+# Counter App — Учебный проект для начинающих
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Counter App Screenshot](screenshot_counter.jpg)  
+*Простой счетчик с красивыми стилями и анимациями*
 
-Currently, two official plugins are available:
+## О проекте
+Это простое приложение-счетчик, которое я создал, чтобы показать, как использовать **React** для управления состоянием и **CSS** для стилизации. Если вы новичок в программировании, этот проект — отличный способ научиться основам фронтенда!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Что вы узнаете:
+- Как настроить React-проект.
+- Как использовать хук `useState` для управления состоянием.
+- Как писать красивые стили с анимациями и адаптивностью.
+- Как публиковать проект на GitHub.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Как это работает
+Счетчик позволяет увеличивать или уменьшать число с помощью кнопок. Число меняет цвет в зависимости от значения: зелёный для положительных, красный для отрицательных. Кнопки имеют плавные анимации и эффект "волны" при клике.
+
+---
+
+## Технологии
+- **React**: для создания интерфейса и логики.
+- **CSS**: для стилизации (градиенты, тени, Flexbox).
+- **Git/GitHub**: для управления версиями и публикации.
+
+---
+
+## Как повторить проект с нуля
+
+### 1. Настройка окружения
+1. Установите [Node.js](https://nodejs.org/) (если ещё не установлено).
+2. Откройте терминал и создайте новый проект с помощью Vite:
+   ```bash
+   npm create vite@latest counter-app -- --template react
+   cd counter-app
+   npm install
