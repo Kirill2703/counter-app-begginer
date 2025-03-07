@@ -1,0 +1,178 @@
+/* Общие стили для body */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #edf6f9 0%, #d9e8ec 100%);
+  height: 100vh; /* Фиксируем высоту body */
+}
+
+/* Основной контейнер */
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  text-align: center;
+}
+
+/* Контейнер счетчика */
+.counter-container {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  max-height: 85vh; /* Ограничиваем высоту */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Заголовок */
+.counter-container h2 {
+  font-size: 1.5rem; /* Уменьшенный размер */
+  margin: 0 0 8px; /* Уменьшенный отступ */
+  color: #4a627a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* Число счетчика */
+.counter-container h1 {
+  font-size: 4rem; /* Уменьшенный размер */
+  margin: 0 0 12px; /* Уменьшенный отступ */
+  font-weight: 700;
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.counter-container h1.positive {
+  color: #2a9d8f;
+  text-shadow: 0 1px 8px rgba(42, 157, 143, 0.3);
+}
+
+.counter-container h1.negative {
+  color: #e63946;
+  text-shadow: 0 1px 8px rgba(230, 57, 70, 0.3);
+}
+
+/* Группа кнопок */
+.button-group {
+  display: flex;
+  gap: 20px; /* Фиксированный отступ между кнопками */
+  justify-content: center;
+}
+
+/* Общие стили кнопок */
+button {
+  position: relative;
+  font-size: 1rem; /* Уменьшенный размер шрифта */
+  padding: 8px 20px; /* Уменьшенный padding */
+  border-radius: 30px; /* Немного уменьшен радиус */
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Кнопка минус */
+button.minus {
+  background: linear-gradient(135deg, #e63946, #cc333f);
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(230, 57, 70, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Кнопка плюс */
+button.plus {
+  background: linear-gradient(135deg, #2a9d8f, #258d81);
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(42, 157, 143, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Эффект при наведении */
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  filter: brightness(115%);
+}
+
+/* Эффект при нажатии */
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Эффект волны при клике */
+button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+button:active::after {
+  width: 150px; /* Уменьшил размер волны для компактности */
+  height: 150px;
+  opacity: 0;
+}
+
+/* Фокус для доступности */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.5);
+}
+
+button.minus:focus {
+  box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.5);
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .counter-container {
+    padding: 10px;
+  }
+
+  .counter-container h1 {
+    font-size: 3rem;
+  }
+
+  .counter-container h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 6px 15px;
+  }
+
+  .button-group {
+    gap: 15px; /* Уменьшенный отступ на мобильных */
+  }
+}
+
+/* Уменьшение анимаций для prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  button,
+  .counter-container h1 {
+    transition: none;
+  }
+
+  button::after {
+    display: none;
+  }
+}
