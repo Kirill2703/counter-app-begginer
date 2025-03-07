@@ -5,7 +5,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(135deg, #edf6f9 0%, #d9e8ec 100%);
-  height: 100vh; /* Фиксируем высоту body */
+  height: 100vh; 
 }
 
 .App {
@@ -17,22 +17,23 @@ body {
 }
 
 .counter-container {
-  padding: 15px;
+  padding: 20px;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  max-height: 85vh;
+  height: 400px;
+  width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 40px;
 }
 
-/* Заголовок */
 .counter-container h2 {
-  font-size: 12px;
+  font-size: 2rem;
   margin: 0 0 8px;
   color: #4a627a;
   text-transform: uppercase;
@@ -41,7 +42,7 @@ body {
 }
 
 .counter-container h1 {
-  font-size: 16px; 
+  font-size: 2.5rem; 
   margin: 0 0 12px;
   font-weight: 700;
   transition: all 0.3s ease;
@@ -68,8 +69,8 @@ body {
 
 button {
   position: relative;
-  font-size: 12px; 
-  padding: 4px 8px; 
+  font-size: 2rem; 
+  padding: 8px 20px; 
   border-radius: 30px; 
   border: none;
   cursor: pointer;
@@ -78,7 +79,6 @@ button {
   letter-spacing: 0.8px;
   overflow: hidden;
   transition: all 0.3s ease;
-  font-size: 8px;
 }
 
 
