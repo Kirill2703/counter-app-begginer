@@ -2,15 +2,19 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [count, setСount] = useState(0);
+  const [count, setCount] = useState(0);
 
   const onClickPlus = () => {
-    setСount(count + 1);
+    setCount(count + 1);
   };
 
   const onClickMinus = () => {
-    setСount(count - 1);
+    setCount(count - 1);
   };
+
+  const onClickReset = () => {
+    setCount(0)
+  }
 
   return (
     <div className="App">
@@ -27,6 +31,9 @@ function App() {
             Plus +
           </button>
         </div>
+        <button onClick={onClickReset} className="reset">
+          Reset
+        </button>
       </div>
     </div>
   );
