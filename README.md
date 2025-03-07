@@ -6,7 +6,7 @@
 ## 🌟 About the project  
 This project is the perfect starting point for beginners learning **React**. You will learn how to manage state, handle events, and style components. The app includes **responsive design**, animations, and smooth effects.  
 
-🔗 **Project Demo:** [Counter App](https://your-link.vercel.app)  
+🔗 **Project Demo:** [Counter App](https://counter-app-begginer.vercel.app/)  
 
 ---
 
