@@ -1,6 +1,6 @@
 # Counter App — Учебный проект для начинающих
 
-![Counter App Screenshot](screenshot_counter.jpg)  
+![Counter App Screenshot](./public/screenshot_counter.jpg)  
 *Простой счетчик с красивыми стилями и анимациями*
 
 ## О проекте
